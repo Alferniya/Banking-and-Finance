@@ -145,6 +145,6 @@ resource "aws_instance" "Prod-Server" {
      sudo docker start $(docker ps -aq)
  EOF
  tags = {
- Name = "Prod-Server"
+ Name = "Prod-tf-Server"
  }
 }
