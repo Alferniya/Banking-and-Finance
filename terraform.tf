@@ -11,6 +11,8 @@ terraform {
 # Configure the AWS provider
 provider "aws" {
   region = "ap-south-1"
+  access_key=AKIATXEQ7ROP6XKB4Y24
+  secret_key=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
 }
 # Creating a VPC
 resource "aws_vpc" "proj-vpc" {
@@ -129,7 +131,7 @@ resource "aws_instance" "Prod-Server" {
  ami = "ami-08e5424edfe926b43"
  instance_type = "t2.micro"
  availability_zone = "ap-south-1b"
- key_name = "chefkeypair"
+ key_name = "key1"
  network_interface {
  device_index = 0
  network_interface_id = aws_network_interface.proj-ni.id
